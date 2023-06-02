@@ -122,8 +122,8 @@ public class Solution extends NumberGenerator{
 		fileGenerator.createFile();
 		fileGenerator.writeFile("Name, Account Num., Account 1, Account 2, Account 3");
 		for(BankAccount account : accounts) {
-			fileGenerator.writeFile(account.getInformation());
-			
+			String tmpInfo = account.getInformation();
+			fileGenerator.writeFile(tmpInfo.substring(0,(tmpInfo.length()-2)));
 		}
 		fileGenerator.closeFile();
 	}
@@ -146,7 +146,8 @@ public class Solution extends NumberGenerator{
 	public void printInfo(){
 		int i = 0;
 		for(BankAccount account : accounts) {
-			System.out.println(""+(i+1)+" "+account.getInformation());
+			String tmpInfo = account.getInformation();
+			System.out.println(""+(i+1)+" "+tmpInfo.substring(0,tmpInfo.length()-2));
 			i++;
 		}
 	}
