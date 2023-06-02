@@ -1,3 +1,4 @@
+package Jars;
 import java.io.IOException;
 
 import Bank.*;
@@ -119,7 +120,6 @@ public class Solution extends NumberGenerator{
 	private void writeCSV() throws IOException{
 		FileGenerator fileGenerator = new FileGenerator("accounts.csv");
 		fileGenerator.createFile();
-		String[] tmpInfo = null;
 		fileGenerator.writeFile("Name, Account Num., Account 1, Account 2, Account 3");
 		for(BankAccount account : accounts) {
 			fileGenerator.writeFile(account.getInformation());
