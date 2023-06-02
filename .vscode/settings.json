@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\bapa7\\Downloads\\collyz.jar"
+    ]
+}
